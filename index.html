@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mg.Tshirt | Premium Archive & Pricing</title>
+    <script src="https://cdn.tailwindcss.com"></script>  
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,400;1,700&family=Montserrat:wght@200;400;700&display=swap');
+        
+        :root {
+            --gold: #b2945e;
+            --dark: #121212;
+            --cream: #faf9f6;
+        }
+
+        body { 
+            background-color: var(--cream); 
+            color: var(--dark); 
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .serif-lux { font-family: 'Bodoni Moda', serif; font-style: italic; }
+        
+        .nav-glass {
+            background: rgba(250, 249, 246, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(18, 18, 18, 0.05);
+        }
+
+        .product-card img {
+            transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .price-tag {
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .reveal { opacity: 0; transform: translateY(20px); transition: 0.8s all ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+    <!-- Navigasi -->
+    <nav class="fixed w-full z-[100] nav-glass px-10 py-6 flex justify-between items-center">
+        <div class="text-xl font-bold tracking-[0.4em] uppercase">Mg.Tshirt</div>
+        <div class="hidden md:flex space-x-12 text-[9px] font-bold uppercase tracking-[0.3em]">
+            <a href="#home" class="hover:text-[#b2945e]">Main</a>
+            <a href="#collection" class="hover:text-[#b2945e]">Collection</a>
+            <a href="#pricing" class="hover:text-[#b2945e]">Pricing & Specs</a>
+            <a href="#social" class="hover:text-[#b2945e]">Social</a>
+        </div>
+        <div class="text-[9px] font-bold">CART (0)</div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header id="home" class="h-[60vh] flex flex-col items-center justify-center text-center px-4 pt-20">
+        <h1 class="text-6xl md:text-8xl font-light tracking-tighter mb-4">Mg. <span class="serif-lux text-gold">Tshirt.</span></h1>
+        <p class="text-[10px] tracking-[0.6em] uppercase text-gray-400">Koleksi Terpilih & Detail Produk</p>
+    </header>
+
+    <!-- Halaman Produk Detail -->
+    <section id="collection" class="max-w-7xl mx-auto px-8 py-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-24 mb-40 reveal">
+            <!-- Image Showcase -->
+            <div class="space-y-4">
+                <div class="aspect-[3/4] bg-gray-200 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=500" class="w-full h-full object-cover">
+                </div>
+                <div class="grid grid-cols-3 gap-4 h-32">
+                    <div class="bg-gray-300 overflow-hidden"><img src="https://images.unsplash.com/photo-1554568218-0f1715e72254?q=80&w=500" class="w-full h-full object-cover grayscale"></div>
+                    <div class="bg-gray-300 overflow-hidden"><img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=500" class="w-full h-full object-cover grayscale"></div>
+                    <div class="bg-gray-300 overflow-hidden flex items-center justify-center text-[10px] font-bold bg-black text-white cursor-pointer">+4 MORE</div>
+                </div>
+            </div>
+
+            <!-- Content Detail -->
+            <div class="flex flex-col justify-center">
+                <span class="text-[10px] font-bold tracking-[0.4em] text-[#b2945e] mb-4 uppercase text-gray-400">Essential Drop</span>
+                <h2 class="text-5xl font-light mb-6 tracking-tight">Signature Noir Tee</h2>
+                <p class="text-gray-500 font-light leading-relaxed mb-10 text-lg">
+                    Kaos dengan potongan *modern-boxy* yang dirancang untuk kenyamanan tanpa batas gender. Dibuat menggunakan serat kapas organik pilihan untuk sirkulasi udara maksimal dan daya tahan jangka panjang.
+                </p>
+                
+                <div class="border-t border-black/10 py-8">
+                    <p class="text-[10px] font-bold tracking-widest uppercase mb-4">Varian Warna</p>
+                    <div class="flex space-x-3">
+                        <div class="w-8 h-8 rounded-full border border-black bg-zinc-900 cursor-pointer"></div>
+                        <div class="w-8 h-8 rounded-full border border-gray-300 bg-white cursor-pointer"></div>
+                        <div class="w-8 h-8 rounded-full border border-gray-300 bg-zinc-400 cursor-pointer"></div>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <p class="text-[10px] font-bold tracking-widest uppercase mb-4">Pilih Ukuran</p>
+                    <div class="flex gap-2">
+                        <button class="border border-black px-4 py-2 text-[10px] font-bold hover:bg-black hover:text-white transition uppercase">S</button>
+                        <button class="border border-black px-4 py-2 text-[10px] font-bold hover:bg-black hover:text-white transition uppercase">M</button>
+                        <button class="border border-black px-4 py-2 text-[10px] font-bold hover:bg-black hover:text-white transition uppercase">L</button>
+                        <button class="border border-black px-4 py-2 text-[10px] font-bold hover:bg-black hover:text-white transition uppercase">XL</button>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between border-y border-black py-6">
+                    <span class="serif-lux text-3xl font-bold">IDR 99.900</span>
+                    <button class="bg-black text-white px-10 py-4 text-[10px] font-bold tracking-widest hover:bg-[#b2945e] transition uppercase">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabel Harga & Spesifikasi -->
+    <section id="pricing" class="bg-white py-40 px-8">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-light tracking-tighter mb-4">Pricing <span class="serif-lux">& Transparency</span></h2>
+                <p class="text-[10px] tracking-[0.3em] uppercase text-gray-400 font-bold">Kualitas terbaik dengan harga yang jujur.</p>
+            </div>
+
+            <div class="overflow-x-auto reveal">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="border-b-2 border-black text-[10px] tracking-widest uppercase font-bold">
+                            <th class="py-6 px-4">Kategori Produk</th>
+                            <th class="py-6 px-4">Material</th>
+                            <th class="py-6 px-4">Fit</th>
+                            <th class="py-6 px-4 text-right">Harga</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm font-light text-gray-600">
+                        <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
+                            <td class="py-8 px-4 text-black font-bold uppercase tracking-tight text-xs">Signature Series</td>
+                            <td class="py-8 px-4 italic">Cotton Combed 24s Organic</td>
+                            <td class="py-8 px-4">Standard Unisex Fit</td>
+                            <td class="py-8 px-4 text-right font-bold text-black text-base">IDR 99.900</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
+                            <td class="py-8 px-4 text-black font-bold uppercase tracking-tight text-xs">Luxury Boxy Drop</td>
+                            <td class="py-8 px-4 italic">Heavyweight Cotton 20s</td>
+                            <td class="py-8 px-4">Oversized Silhouette</td>
+                            <td class="py-8 px-4 text-right font-bold text-black text-base">IDR 89.000</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
+                            <td class="py-8 px-4 text-black font-bold uppercase tracking-tight text-xs">Essential White</td>
+                            <td class="py-8 px-4 italic">Supima Premium Cotton</td>
+                            <td class="py-8 px-4">Relaxed Fit</td>
+                            <td class="py-8 px-4 text-right font-bold text-black text-base">IDR 99.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-10 text-center reveal">
+                <div class="p-8 border border-gray-100 bg-gray-50">
+                    <p class="text-[10px] font-bold tracking-[0.3em] uppercase mb-2">PENGIRIMAN</p>
+                    <p class="text-xs text-gray-500 italic">Gratis ongkir ke seluruh Indonesia untuk pembelian di atas 150rb.</p>
+                </div>
+                <div class="p-8 border border-gray-100 bg-gray-50">
+                    <p class="text-[10px] font-bold tracking-[0.3em] uppercase mb-2">PENGEMBALIAN</p>
+                    <p class="text-xs text-gray-500 italic">Kebijakan pengembalian 7 hari jika ukuran tidak sesuai atau barang rusak.</p>
+                </div>
+                <div class="p-8 border border-gray-100 bg-gray-50">
+                    <p class="text-[10px] font-bold tracking-[0.3em] uppercase mb-2">PEMBAYARAN</p>
+                    <p class="text-xs text-gray-500 italic">Tersedia via Transfer Bank, QRIS, dan Kartu Kredit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Media Sosial (Hanya Teks) -->
+    <section id="social" class="py-40 bg-zinc-950 text-white text-center">
+        <h3 class="text-[10px] font-bold tracking-[0.4em] uppercase text-gray-500 mb-10 italic">Channel Studio</h3>
+        <div class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-20">
+            <div class="flex flex-col">
+                <span class="text-3xl font-light tracking-[0.1em]">INSTAGRAM</span>
+                <span class="text-[10px] text-zinc-600 font-bold uppercase tracking-widest mt-2">@mg.tshirt</span>
+            </div>
+            <div class="flex flex-col">
+                <span class="text-3xl font-light tracking-[0.1em]">TIKTOK</span>
+                <span class="text-[10px] text-zinc-600 font-bold uppercase tracking-widest mt-2">mg.tshirt.official</span>
+            </div>
+            <div class="flex flex-col">
+                <span class="text-3xl font-light tracking-[0.1em]">WHATSAPP</span>
+                <span class="text-[10px] text-zinc-600 font-bold uppercase tracking-widest mt-2">Personal Concierge</span>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="py-12 px-10 text-[9px] font-bold tracking-widest text-gray-400 uppercase text-center border-t border-black/5">
+        &copy; 2026 MG.TSHIRT COLLECTIVE — TANGERANG, INDONESIA.
+    </footer>
+
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+</body>
+</html>
